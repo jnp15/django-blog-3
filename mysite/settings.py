@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "578687dd8e56176fc5f8b3d63d5cc7bab9eb74ea"
-#SECRET_KEY = "xak=ca*e6hvh8q5hgfz5l9ees)_pxjif0)ui!ikifg4!enjk+7"
+# SECRET_KEY = "xak=ca*e6hvh8q5hgfz5l9ees)_pxjif0)ui!ikifg4!enjk+7"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'django.contrib.sites', # new
-    'allauth',  # new
-    'allauth.account',  # new
-    'allauth.socialaccount',  # new
-    'allauth.socialaccount.providers.github',  # new
+    "django.contrib.sites",  # new
+    "allauth",  # new
+    "allauth.account",  # new
+    "allauth.socialaccount",  # new
+    "allauth.socialaccount.providers.github",  # new
     "polling",
     "blogging",
     "rest_framework",
@@ -64,7 +64,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [os.path.join(BASE_DIR, "mysite/templates")],
-#        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        #        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -133,4 +133,4 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_VERIFICATION = "none"
