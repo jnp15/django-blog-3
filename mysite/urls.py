@@ -35,5 +35,4 @@ urlpatterns = [
 #    path("login/", LoginView.as_view(template_name="home.html"), name="home"),
     path("logout/", LogoutView.as_view(next_page="/"), name="logout"),
     path('accounts/', include('allauth.urls')),  # new
-    path('', Home.as_view(), name='home'),  # new
 ]
