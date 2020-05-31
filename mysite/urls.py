@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LoginView, LogoutView
+
 from rest_framework import routers
 from blogging.views import UserViewSet, PostViewSet, CategoryViewSet
 
@@ -24,7 +25,6 @@ router.register("users", UserViewSet)
 router.register("post", PostViewSet)
 router.register("category", CategoryViewSet)
 
-
 urlpatterns = [
     path("", include("blogging.urls")),
     path("api/", include(router.urls)),
@@ -32,5 +32,7 @@ urlpatterns = [
     path("polling/", include("polling.urls")),
     path("admin/", admin.site.urls),
     path("login/", LoginView.as_view(template_name="login.html"), name="login"),
+    #    path("login/", LoginView.as_view(template_name="home.html"), name="home"),
     path("logout/", LogoutView.as_view(next_page="/"), name="logout"),
+    path("accounts/", include("allauth.urls")),  # new
 ]
