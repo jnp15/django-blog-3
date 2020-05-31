@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',  # new
     "polling",
     "blogging",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
